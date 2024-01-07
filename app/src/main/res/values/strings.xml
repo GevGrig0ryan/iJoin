@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">iJoin</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="as_volunteer">As Volunteer</string>
+    <string name="as_company">As Company</string>
+    <string name="step_1">Step 1</string>
+    <string name="name">Name</string>
+    <string name="surname">Surname</string>
+    <string name="email">Email</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="next">Next</string>
+    <string name="step_2">Step 2</string>
+    <string name="tell_us_something_about_you">Tell us something about you</string>
+    <string name="name_of_company">Name of Company</string>
+    <string name="ijoin">iJoin</string>
+    <string name="volunteer">Volunteer</string>
+    <string name="company">Company</string>
+    <!-- Strings related to login -->
+    <string name="title_activity_login">Login</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+</resources>

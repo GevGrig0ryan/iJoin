@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CompanyOrVolunteer"
+    android:padding="15dp"
+    android:background="@color/white">
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="230dp"
+        android:text="I am a..."
+        android:textColor="@color/bc_green"
+        android:fontFamily="@font/gilroy_extrabold"
+        android:textSize="50sp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/asComp"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:text="Company"
+        android:textSize="15dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/gilroy_extrabold"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/bc_green"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/asVol"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Volunteer"
+        android:textColor="@color/white"
+        android:fontFamily="@font/gilroy_extrabold"
+        android:textSize="15sp"
+        android:background="@drawable/rounded_button"/>
+
+</LinearLayout>
