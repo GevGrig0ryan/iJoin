@@ -19,8 +19,6 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import java.util.HashMap;
-
 public class SignUpAsCompStep2 extends AppCompatActivity {
     Button btnSignUp;
     EditText editText;
@@ -54,8 +52,29 @@ public class SignUpAsCompStep2 extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()){
-                                    Toast.makeText(SignUpAsCompStep2.this, "Accont created", Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(SignUpAsCompStep2.this, MainActivity2.class);
+                                    FirebaseUser currentUser = mAuth.getCurrentUser();
+                                    DatabaseReference usersRef = database.getReference().child("users");
+                                    Users users = new Users();
+                                    users.setName(name);
+                                    users.setUserType(usertype);
+                                    users.setDataAboutUser(dataAboutComp);
+                                    users.setPassword(password);
+                                    users.setEmail(email);
+                                    usersRef.child(currentUser.getUid()).setValue(users);
+                                    currentUser.sendEmailVerification()
+                                            .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                @Override
+                                                public void onComplete(@NonNull Task<Void> task) {
+                                                    if(task.isSuccessful()){
+                                                        Toast.makeText(SignUpAsCompStep2.this, "Account created, please verify your email", Toast.LENGTH_SHORT).show();
+                                                    }
+                                                    else{
+                                                        Toast.makeText(SignUpAsCompStep2.this, "Failed to send email verification", Toast.LENGTH_SHORT).show();
+                                                    }
+                                                }
+                                            });
+                                    Intent intent = new Intent(SignUpAsCompStep2.this, SignIn.class);
+                                    intent.putExtra("Usertype", "Comp");
                                     startActivity(intent);
                                 }
                                 else{
@@ -63,15 +82,7 @@ public class SignUpAsCompStep2 extends AppCompatActivity {
                                 }
                             }
                         });
-                FirebaseUser currentUser = mAuth.getCurrentUser();
-                DatabaseReference usersRef = database.getReference().child("users");
-                Users users = new Users();
-                users.setName(name);
-                users.setUserType(usertype);
-                users.setDataAboutUser(dataAboutComp);
-                users.setPassword(password);
-                users.setEmail(email);
-                usersRef.child(currentUser.getUid()).setValue(users);
+
             }
         });
     }

@@ -3,6 +3,7 @@ package com.example.ijoin;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -260,17 +261,37 @@ public class SignUpAsVolStep3 extends AppCompatActivity {
                     Toast.makeText(SignUpAsVolStep3.this, "Please choose a type of volunteering", Toast.LENGTH_SHORT).show();
                     return;
                 }
-
                 mAuth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
-                                    Toast.makeText(SignUpAsVolStep3.this, "Account created.",
-                                            Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(SignUpAsVolStep3.this, MainActivity.class);
+                                    FirebaseUser currentUser = mAuth.getCurrentUser();
+                                    DatabaseReference usersRef = database.getReference().child("users");
+                                    Users users = new Users();
+                                    users.setName(name);
+                                    users.setSurname(surname);
+                                    users.setUserType(usertype);
+                                    users.setDataAboutUser(dataAboutUser);
+                                    users.setPassword(password);
+                                    users.setEmail(email);
+                                    users.setVolTypes(voltypes);
+                                    usersRef.child(currentUser.getUid()).setValue(users);
+                                    currentUser.sendEmailVerification()
+                                            .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                @Override
+                                                public void onComplete(@NonNull Task<Void> task) {
+                                                    if(task.isSuccessful()){
+                                                        Toast.makeText(SignUpAsVolStep3.this, "Account created, please verify your email", Toast.LENGTH_SHORT).show();
+                                                    }
+                                                    else{
+                                                        Toast.makeText(SignUpAsVolStep3.this, "Failed to send email verification", Toast.LENGTH_SHORT).show();
+                                                    }
+                                                }
+                                            });
+                                    Intent intent = new Intent(SignUpAsVolStep3.this, SignIn.class);
+                                    intent.putExtra("Usertype", "Vol");
                                     startActivity(intent);
-
                                 } else {
                                     // If sign in fails, display a message to the user.
                                     Toast.makeText(SignUpAsVolStep3.this, "Authentication failed.",
@@ -278,17 +299,6 @@ public class SignUpAsVolStep3 extends AppCompatActivity {
                                 }
                             }
                         });
-                FirebaseUser currentUser = mAuth.getCurrentUser();
-                DatabaseReference usersRef = database.getReference().child("users");
-                Users users = new Users();
-                users.setName(name);
-                users.setSurname(surname);
-                users.setUserType(usertype);
-                users.setDataAboutUser(dataAboutUser);
-                users.setPassword(password);
-                users.setEmail(email);
-                users.setVolTypes(voltypes);
-                usersRef.child(currentUser.getUid()).setValue(users);
             }
         });
     }

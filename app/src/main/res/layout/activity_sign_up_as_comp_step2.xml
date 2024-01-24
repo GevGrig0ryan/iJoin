@@ -31,7 +31,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/gilroy_light"
-            android:hint="Our company..." />
+            android:hint="Our company..."
+            android:inputType="text"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.appcompat.widget.AppCompatButton

@@ -19,7 +19,7 @@
             android:name=".SignUpAsCompStep1"
             android:exported="false" />
         <activity
-            android:name=".MainActivity2"
+            android:name=".CompActivity"
             android:exported="false" />
         <activity
             android:name=".SignUpAsVolStep3"
@@ -46,7 +46,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".VolActivity"
             android:exported="true" />
     </application>
 
