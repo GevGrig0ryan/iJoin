@@ -13,13 +13,18 @@
         android:theme="@style/Theme.IJoin"
         tools:targetApi="31">
         <activity
+            android:name=".CompActivity"
+            android:exported="false"
+            android:label="@string/title_activity_comp" />
+        <activity
+            android:name=".VolActivity"
+            android:exported="false"
+            android:label="@string/title_activity_vol" />
+        <activity
             android:name=".SignUpAsCompStep2"
             android:exported="false" />
         <activity
             android:name=".SignUpAsCompStep1"
-            android:exported="false" />
-        <activity
-            android:name=".CompActivity"
             android:exported="false" />
         <activity
             android:name=".SignUpAsVolStep3"
@@ -45,9 +50,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".VolActivity"
-            android:exported="true" />
     </application>
 
 </manifest>
