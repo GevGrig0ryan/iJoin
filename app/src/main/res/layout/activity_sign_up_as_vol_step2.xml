@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpAsVolStep2"
+    android:orientation="vertical"
+    android:padding="30dp"
+    android:background="@color/white"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tell us about you."
+        android:textSize="40dp"
+        android:layout_marginTop="45dp"
+        android:fontFamily="@font/gilroy_extrabold"
+        android:textColor="@color/bc_green"
+        android:gravity="center"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="354dp"
+        android:textColorHint="@color/bc_green"
+        android:backgroundTint="@color/white1"
+        android:layout_marginTop="100dp">
+
+        <EditText
+            android:id="@+id/data_about_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gilroy_light"
+            android:hint="I am a..." />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:fontFamily="@font/gilroy_extrabold"
+        android:background="@drawable/rounded_button"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        />
+</LinearLayout>

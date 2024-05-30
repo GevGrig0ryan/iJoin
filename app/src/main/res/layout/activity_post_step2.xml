@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PostStep2"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="What kind of volunteering would you suggest?"
+        android:textColor="@color/bc_green"
+        android:fontFamily="@font/gilroy_extrabold"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:textSize="40dp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:orientation="horizontal"
+        android:layout_marginRight="20sp"
+        android:layout_marginLeft="20sp"
+        >
+        <Button
+            android:id="@+id/youth_mentor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Youth Mentor"
+            android:fontFamily="@font/gilroy_semibold"
+            android:textStyle="bold"
+            android:textColor="@color/bc_green"
+            android:backgroundTint="@color/white1"
+            />
+
+        <Button
+            android:id="@+id/garden_guru"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:backgroundTint="@color/white1"
+            android:fontFamily="@font/gilroy_semibold"
+            android:text="Garden Guru"
+            android:textColor="@color/bc_green"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        >
+        <Button
+            android:id="@+id/pet_pal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pet Pal"
+            android:fontFamily="@font/gilroy_semibold"
+            android:textStyle="bold"
+            android:textColor="@color/bc_green"
+            android:backgroundTint="@color/white1"
+            />
+
+        <Button
+            android:id="@+id/tech_tutor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:backgroundTint="@color/white1"
+            android:fontFamily="@font/gilroy_semibold"
+            android:text="Tech Tutor"
+            android:textColor="@color/bc_green"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/eco_helper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:backgroundTint="@color/white1"
+            android:fontFamily="@font/gilroy_semibold"
+            android:text="Eco Helper"
+            android:textColor="@color/bc_green"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginRight="20sp"
+        android:layout_marginLeft="20sp"
+        >
+        <Button
+            android:id="@+id/food_helper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Food Helper"
+            android:fontFamily="@font/gilroy_semibold"
+            android:textStyle="bold"
+            android:textColor="@color/bc_green"
+            android:backgroundTint="@color/white1"
+            />
+
+        <Button
+            android:id="@+id/online_helper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:backgroundTint="@color/white1"
+            android:fontFamily="@font/gilroy_semibold"
+            android:text="Online Helper"
+            android:textColor="@color/bc_green"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        >
+        <Button
+            android:id="@+id/community_champ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Community Champ"
+            android:fontFamily="@font/gilroy_semibold"
+            android:textStyle="bold"
+            android:textColor="@color/bc_green"
+            android:backgroundTint="@color/white1"
+            />
+
+        <Button
+            android:id="@+id/sports_coach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:backgroundTint="@color/white1"
+            android:fontFamily="@font/gilroy_semibold"
+            android:text="Sports Coach"
+            android:textColor="@color/bc_green"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginRight="20sp"
+        android:layout_marginLeft="20sp"
+        >
+        <Button
+            android:id="@+id/red_cross_youth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Red Cross Youth"
+            android:fontFamily="@font/gilroy_semibold"
+            android:textStyle="bold"
+            android:textColor="@color/bc_green"
+            android:backgroundTint="@color/white1"
+            />
+        <Button
+            android:id="@+id/other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:backgroundTint="@color/white1"
+            android:fontFamily="@font/gilroy_semibold"
+            android:text="Other"
+            android:textColor="@color/bc_green"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Post"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/yellow"
+        android:fontFamily="@font/gilroy_extrabold"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        />
+</LinearLayout>
